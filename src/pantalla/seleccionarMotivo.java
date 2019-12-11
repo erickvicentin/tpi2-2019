@@ -25,6 +25,7 @@ public class seleccionarMotivo extends javax.swing.JFrame {
      */
     public seleccionarMotivo() {
         initComponents();
+        setTitle("MaxSelect System");
         setResizable(false);
         setSize(575,300);
         setLocationRelativeTo(null);

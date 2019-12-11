@@ -25,6 +25,7 @@ public class cargarCliente extends javax.swing.JFrame {
      */
     public cargarCliente() {
         initComponents();
+        setTitle("MaxSelect System");
         setSize(575,580);
         setResizable(false);
         setLocationRelativeTo(null);

@@ -24,6 +24,7 @@ public class registrarLlamada extends javax.swing.JFrame {
      */
     public registrarLlamada() {
         initComponents();
+        setTitle("MaxSelect System");
         setSize(575,580);
         setResizable(false);
         setLocationRelativeTo(null);

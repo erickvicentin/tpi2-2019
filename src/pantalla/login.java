@@ -20,6 +20,7 @@ public class login extends javax.swing.JFrame {
     public login() {
         initComponents();
         setSize(364, 500);
+        setTitle("MaxSelect System");
         setResizable(false);
         setLocationRelativeTo(null);
     }
@@ -81,13 +82,13 @@ public class login extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Usuario");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(150, 170, 78, 22);
+        jLabel2.setBounds(150, 170, 67, 22);
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Contraseña");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(130, 230, 116, 20);
+        jLabel3.setBounds(130, 230, 99, 20);
 
         txt_contraseniaLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
