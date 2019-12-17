@@ -14,6 +14,8 @@ import maxselectdds.Metodos_sql;
  */
 public class login extends javax.swing.JFrame {
 
+    public static String user = "admin";
+    String pass = "123";
     /**
      * Creates new form principal
      */
@@ -141,9 +143,6 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_exitMouseClicked
 
     private void btn_signInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_signInMouseClicked
-
-        String user = "admin";
-        String pass = "123";
 
         if ((txt_usuarioLogin.getText().equals(user)) && (txt_contraseniaLogin.getText().equals(pass))) {
             menuPrincipal mp = new menuPrincipal();
