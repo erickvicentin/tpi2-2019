@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 
 /**
  *
@@ -19,8 +20,10 @@ public class Metodos_sql {
     
     public static PreparedStatement sentencia_preparada;
     public static ResultSet resultado;
+    public static ResultSet resulta2;
     public static String sql;
     public static int resultado_numero = 0;
+    public static String operador = pantalla.login.user;
     
     public int guardar(String dni, String nomyap, String direccion, String localidad, String provincia, String telefono, String CP){
         int resultado = 0;
@@ -120,20 +123,26 @@ public class Metodos_sql {
         }
         return busqueda_dni;
     }
-    public int guardarMotivo(String motivo,String dni){
+    public int guardarLlamada(String motivo,String dni){
         int resultado = 0;
         Connection conn = null;
         
-        String sentencia_guardar = ("INSERT INTO motivos (motivo,dni) VALUES (?,?)");
+        String sentencia_guardar = ("INSERT INTO llamada (motivo,dni,fecha,empleado) VALUES (?,?,?,?)");
+        java.util.Date fecha = new Date();
         
         try{
             conn = Conectar.Conectar();
             sentencia_preparada = conn.prepareStatement(sentencia_guardar);
             
+            
             sentencia_preparada.setString(1, motivo);
             sentencia_preparada.setString(2, dni);
+            sentencia_preparada.setString(3, fecha.toString());
+            sentencia_preparada.setString(4, operador);
+            
             
             resultado = sentencia_preparada.executeUpdate();
+            
             sentencia_preparada.close();
             conn.close();
         } catch(Exception e){
